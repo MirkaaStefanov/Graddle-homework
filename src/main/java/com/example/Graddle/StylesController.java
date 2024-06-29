@@ -7,9 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class StylesController {
+    private StylesClient stylesClient;
 
     @Autowired
-    StylesClient stylesClient;
+    public StylesController(StylesClient stylesClient){
+        this.stylesClient = stylesClient;
+    }
 
     @GetMapping("/allStyles")
     public ResponseEntity<StylesResponse> returnAllStyles(){
