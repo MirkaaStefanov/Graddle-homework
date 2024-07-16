@@ -4,6 +4,7 @@ public class Style {
 
     private String name;
     private String identifier;
+    private int number;
 
     public Style(String name, String identifier) {
         this.name = name;
@@ -24,5 +25,13 @@ public class Style {
 
     public void setIdentifier(String identifier) {
         this.identifier = identifier;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }
